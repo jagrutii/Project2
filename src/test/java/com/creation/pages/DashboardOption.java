@@ -1,0 +1,30 @@
+package com.creation.pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class DashboardOption {
+WebDriver driver;
+	
+	public DashboardOption(WebDriver ldriver)
+	{
+		driver=ldriver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(xpath="//*[@id=\"learn-press-user-profile\"]/ul/li[3]") WebElement offerAcademies;
+	
+	@FindBy(xpath="//*[@id=\"tab-academies\"]/div/div/ul/li[1]/form/div/button") WebElement subsribebtn;
+	
+	public void offeracad()
+	{
+		offerAcademies.click();
+	}
+	
+	public void subscribeClick() {
+		subsribebtn.click();
+	}
+	
+}
